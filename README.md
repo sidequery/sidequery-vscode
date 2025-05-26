@@ -63,7 +63,13 @@ For detailed usage examples and tips, see the [Usage Guide](docs/USAGE_GUIDE.md)
 
 ## Limitations
 
-Sidequery for VSCode is very much a work in progress. Today, only DuckDB connections are supported, with more connection types supported in the future.
+Sidequery for VSCode is very much a work in progress. Today, only DuckDB connections are supported. 
+
+## Roadmap
+- More connection types
+- Centralization of secrets
+- Visualizations
+- Deployment
 
 ## Development
 
