@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bun add:*)",
+      "Bash(mkdir:*)",
+      "Bash(bun run:*)",
+      "Bash(ls:*)",
+      "Bash(bun install:*)",
+      "Bash(duckdb:*)",
+      "Bash(npm test:*)",
+      "Bash(bun test:*)",
+      "Bash(mv:*)",
+      "Bash(chmod:*)"
+    ],
+    "deny": []
+  }
+}

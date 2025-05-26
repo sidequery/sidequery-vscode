@@ -1,0 +1,64 @@
+{
+  "name": "sidequery-vscode",
+  "displayName": "SideQuery",
+  "description": "SQL cell-based editor with DuckDB execution",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:sql"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "sidequery.openEditor",
+        "title": "Open with SideQuery",
+        "category": "SideQuery"
+      }
+    ],
+    "notebooks": [
+      {
+        "type": "sql-notebook",
+        "displayName": "SQL Notebook",
+        "selector": [
+          {
+            "filenamePattern": "*.sql"
+          }
+        ]
+      }
+    ],
+    "notebookRenderer": [
+      {
+        "id": "sidequery.sql-renderer",
+        "displayName": "SQL Result Renderer",
+        "entrypoint": "./out/renderer.js",
+        "mimeTypes": [
+          "x-application/sidequery-sql-result"
+        ]
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "bun run compile && bun run compile:renderer",
+    "compile": "tsc -p ./",
+    "compile:renderer": "tsc -p tsconfig.renderer.json",
+    "watch": "tsc -watch -p ./",
+    "test": "bun test/run-all-tests.ts",
+    "test:duckdb": "bun test/integration/test-duckdb-executor.ts",
+    "test:arrow": "bun test/integration/test-arrow-reader.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/vscode": "^1.100.0",
+    "typescript": "^5.8.3",
+    "vscode-test": "^1.6.1"
+  },
+  "dependencies": {
+    "apache-arrow": "^15.0.0"
+  }
+}
