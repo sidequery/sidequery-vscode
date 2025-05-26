@@ -1,10 +1,10 @@
-# SideQuery for VSCode
+# Sidequery for VSCode
 
 Transform SQL files into interactive notebooks powered by DuckDB.
 
 ## Overview
 
-SideQuery is a VSCode extension that turns `.sql` files into executable notebooks. Write queries in cells separated by semicolons, execute them individually or all at once, and see results in formatted tables. For example:
+Sidequery for VSCode is a VSCode extension that turns `.sql` files into executable notebooks. Write queries in cells separated by semicolons, execute them individually or all at once, and see results in formatted tables. For example:
 
 ```sql
 -- Create table
@@ -61,6 +61,10 @@ Press F5 to run the extension in a new VSCode window.
 
 For detailed usage examples and tips, see the [Usage Guide](docs/USAGE_GUIDE.md).
 
+## Limitations
+
+Sidequery for VSCode is very much a work in progress. Today, only DuckDB connections are supported, with more connection types supported in the future.
+
 ## Development
 
 ### Prerequisites
@@ -116,4 +120,4 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 
 ## License
 
-MIT License - see [LICENSE](LICENSE) file for details
+GPL v3 License - see [LICENSE](LICENSE) file for details
